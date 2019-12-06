@@ -64,12 +64,11 @@ public class DemoApplication {
             userUser.getRoles().add(userRole);
 
 
-        /*    roleRepository.save(userRole);
-            roleRepository.save(adminRole);
-            userRepoistory.save(adminUser);
-            userRepoistory.save(userUser);
+           // roleRepository.save(userRole);
+           // roleRepository.save(adminRole);
+           // userRepoistory.save(adminUser);
 
-         */
+
 
 
         };

@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="./layout/master.html"
       >
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
 
 <body>
-
+<div layout:fragment="context">
 <div class="container">
+ <div th:if="${success}">
+     <p class="text-success text-lg-center">Successfully Registered. Please Login Again!</p>
+ </div>
 <form class="form-horizontal" role="form" method="POST" th:action="@{/login}">
     <div class="row">
         <div class="col-md-3"></div>
@@ -71,6 +76,6 @@
     </div>
 </form>
 </div>
-
+</div>
 </body>
 </html>

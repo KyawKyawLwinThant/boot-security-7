@@ -28,6 +28,7 @@ public class User implements UserDetails{
     private Set<Role> roles=new HashSet<>();
 
 
+
     public Set<Role> getRoles() {
         return roles;
     }
@@ -43,6 +44,8 @@ public class User implements UserDetails{
     public void setId(Integer id) {
         this.id = id;
     }
+
+
 
     public String getEmail() {
         return email;
@@ -85,8 +88,10 @@ public class User implements UserDetails{
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return userEnable;
     }
+    @Transient
+    private final boolean userEnable=true;
 
     public void setPassword(String password) {
         this.password = password;
